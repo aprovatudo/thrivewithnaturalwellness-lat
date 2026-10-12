@@ -2,66 +2,76 @@
 <html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Segredo</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI', Arial, sans-serif;background:#0d0d0d;color:#f0ead6;line-height:1.6}
-header{background:#0d0d0d;border-bottom:1px solid #7a6020;padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:56px;position:sticky;top:0;z-index:10}
-.logo{font-family:Garamond, Georgia, serif;font-size:.95rem;font-weight:700;color:#c9a227;letter-spacing:.04em}
+body{font-family:'Segoe UI', Arial, sans-serif;background:#f5f6fa;color:#444;line-height:1.6}
+header{background:#ffffff;border-bottom:3px solid #3949ab;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:10}
+header h1{font-family:'Segoe UI', 'Helvetica Neue', sans-serif;font-size:1rem;font-weight:900;color:#1a1a2e;letter-spacing:.02em}
 nav ul{list-style:none;display:flex;gap:32px}
-nav a{color:#a09060;text-decoration:none;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase}
-nav a:hover{color:#c9a227}
-.hero{padding:100px 48px 80px;max-width:900px}
-.hero-tag{display:inline-block;border:1px solid #7a6020;color:#c9a227;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;padding:6px 16px;margin-bottom:32px}
-.hero h1{font-family:Garamond, Georgia, serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:700;line-height:1.1;margin-bottom:24px;color:#f0ead6}
-.hero h1 em{color:#c9a227;font-style:normal}
-.hero-desc{font-size:1.1rem;color:#a09060;max-width:600px;margin-bottom:40px;line-height:1.8}
-.hero-cta{display:inline-block;background:#c9a227;color:#0d0d0d;padding:16px 40px;text-decoration:none;font-weight:700;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase}
-.hero-cta:hover{background:#7a6020;color:#f0ead6}
-.divider{border:none;border-top:1px solid #7a6020;margin:0 48px}
-.section{padding:72px 48px;max-width:960px;margin:0 auto}
-.sec-label{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#c9a227;margin-bottom:12px}
-.sec-h2{font-family:Garamond, Georgia, serif;font-size:1.8rem;font-weight:700;color:#f0ead6;margin-bottom:48px}
-.srv-item{display:flex;gap:32px;align-items:flex-start;padding:28px 0;border-bottom:1px solid #7a6020}
-.srv-item:last-child{border-bottom:none}
-.srv-n{font-family:Garamond, Georgia, serif;font-size:3rem;font-weight:700;color:#7a6020;min-width:72px;line-height:1;letter-spacing:-.02em}
-.srv-item h4{font-family:Garamond, Georgia, serif;font-size:1.05rem;font-weight:700;color:#c9a227;margin-bottom:8px}
-.srv-item p{font-size:.9rem;color:#a09060;line-height:1.7}
-.sobre-sec{background:#141414;padding:72px 48px;margin-top:0}
-.sobre-inner{max-width:900px;margin:0 auto}
-.sobre-inner p{color:#a09060;line-height:1.9;margin-bottom:16px;font-size:.98rem}
-.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0;margin-top:48px;border:1px solid #7a6020}
-.meta-cell{padding:20px 24px;border-right:1px solid #7a6020}
-.meta-cell:last-child{border-right:none}
-.meta-label{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:#c9a227;margin-bottom:4px}
-.meta-value{font-size:.92rem;color:#f0ead6;font-weight:600}
-.contato-sec{padding:72px 48px;max-width:960px;margin:0 auto}
-.contato-inner{border-left:2px solid #c9a227;padding-left:32px;max-width:500px}
-.contato-inner p{color:#a09060;margin-bottom:12px;font-size:.95rem;line-height:1.7}
-.contato-inner a{color:#c9a227;text-decoration:none}
-footer{background:#141414;border-top:1px solid #7a6020;padding:24px 48px;display:flex;justify-content:space-between;font-size:.78rem;color:#5a4a20}
-@media(max-width:600px){.hero{padding:60px 24px}.section,.contato-sec{padding:48px 24px}nav{display:none}.srv-n{font-size:2rem;min-width:48px}}
+nav a{color:#3949ab;text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+nav a:hover{color:#283593}
+.hero{display:grid;grid-template-columns:1fr 380px;min-height:480px}
+.hero-left{background:#f5f6fa;padding:64px 40px 64px 40px;display:flex;flex-direction:column;justify-content:center}
+.hero-eyebrow{font-size:.75rem;letter-spacing:.18em;color:#3949ab;text-transform:uppercase;font-weight:700;margin-bottom:16px}
+.hero-left h2{font-family:'Segoe UI', 'Helvetica Neue', sans-serif;font-size:2.6rem;font-weight:900;color:#1a1a2e;line-height:1.15;margin-bottom:20px}
+.hero-left h2 em{color:#3949ab;font-style:normal}
+.hero-left p{color:#444;font-size:1rem;max-width:480px;margin-bottom:32px;line-height:1.75}
+.hero-cta{display:inline-block;background:#3949ab;color:white;padding:14px 32px;text-decoration:none;font-weight:700;font-size:.9rem;letter-spacing:.04em;text-transform:uppercase;transition:background .2s}
+.hero-cta:hover{background:#283593}
+.hero-right{background:#3949ab;color:#ffffff;padding:48px 36px;display:flex;flex-direction:column;justify-content:center;gap:24px}
+.hero-right h3{font-family:'Segoe UI', 'Helvetica Neue', sans-serif;font-size:1rem;font-weight:700;opacity:.7;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
+.info-item{border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:16px}
+.info-item:last-child{border-bottom:none;padding-bottom:0}
+.info-label{font-size:.75rem;opacity:.65;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.info-value{font-size:1rem;font-weight:600}
+.section{max-width:960px;margin:72px auto;padding:0 40px}
+.section-label{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:#3949ab;font-weight:700;margin-bottom:12px}
+.section h2{font-family:'Segoe UI', 'Helvetica Neue', sans-serif;font-size:1.7rem;font-weight:900;color:#1a1a2e;margin-bottom:40px}
+.srv-row{display:flex;gap:24px;align-items:flex-start;padding:24px 0;border-bottom:1px solid #e8eaf6}
+.srv-row:last-child{border-bottom:none}
+.srv-num{font-family:'Segoe UI', 'Helvetica Neue', sans-serif;font-size:2rem;font-weight:900;color:#3949ab;opacity:.3;min-width:56px;line-height:1}
+.srv-body h4{font-family:'Segoe UI', 'Helvetica Neue', sans-serif;font-size:1rem;font-weight:700;color:#1a1a2e;margin-bottom:6px}
+.srv-body p{font-size:.9rem;color:#444;line-height:1.65}
+.sobre-grid{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
+.sobre-text p{color:#444;line-height:1.85;margin-bottom:16px}
+.stats-panel{background:#e8eaf6;border-left:4px solid #3949ab;padding:28px}
+.stats-panel p{font-size:.88rem;color:#444;margin-bottom:10px;line-height:1.5}
+.stats-panel p strong{color:#283593;display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em}
+.contato-box{background:#e8eaf6;border-left:4px solid #3949ab;padding:32px;max-width:560px}
+.contato-box p{font-size:.95rem;color:#444;margin-bottom:12px;line-height:1.6}
+.contato-box a{color:#3949ab;text-decoration:none;font-weight:600}
+footer{background:#1a1a2e;color:#6677aa;padding:28px 40px;display:flex;justify-content:space-between;align-items:center;font-size:.8rem;margin-top:80px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.hero-right{display:none}.sobre-grid{grid-template-columns:1fr}nav{display:none}}
 </style></head><body>
-<header><span class="logo">Segredo</span><nav><ul><li><a href="#servicos">Serviços</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#contato">Contato</a></li></ul></nav></header>
+<header><h1>Segredo</h1><nav><ul><li><a href="#servicos">Serviços</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#contato">Contato</a></li></ul></nav></header>
 <div id="hero" class="hero">
-  <div class="hero-tag">Brinquedos · Diversão · Lazer Garantido</div>
-  <h1>Brinquedos e diversão para <em>toda a família</em> em Rio das Ostras</h1>
-  <p class="hero-desc">A Segredo oferece uma completa seleção de brinquedos e artigos recreativos para crianças e adultos. Somos o seu destino para diversão, aprendizado e momentos inesquecíveis com as pessoas que você ama.</p>
-  <a href="#contato" class="hero-cta">Converse com especialistas</a>
+  <div class="hero-left">
+    <p class="hero-eyebrow">Brinquedos · Diversão · Criatividade</p>
+    <h2>Brinquedos e <em>diversão</em> para todas as <em>idades</em></h2>
+    <p>A Segredo é sua loja de confiança para encontrar os melhores brinquedos e artigos recreativos em Rio das Ostras. Oferecemos produtos de qualidade que estimulam a criatividade, imaginação e desenvolvimento das crianças.</p>
+    <a href="#contato" class="hero-cta">Falar com especialista</a>
+  </div>
+  <div class="hero-right">
+    <h3>Segredo</h3>
+    <div class="info-item"><div class="info-label">Fundação</div><div class="info-value">2001</div></div>
+    <div class="info-item"><div class="info-label">Localização</div><div class="info-value">Rio Das Ostras — RJ</div></div>
+    
+    <div class="info-item"><div class="info-label">CNPJ</div><div class="info-value">04.504.869/0001-24</div></div>
+  </div>
 </div>
-<hr class="divider">
-<div id="servicos" class="section"><p class="sec-label">Expertise</p><h2 class="sec-h2">Nossas especialidades</h2><div class="srv-item"><span class="srv-n">01</span><div><h4>Brinquedos Educativos</h4><p>Desenvolvemos habilidades cognitivas e criatividade através de brinquedos que aliam diversão e aprendizado.</p></div></div><div class="srv-item"><span class="srv-n">02</span><div><h4>Artigos Recreativos</h4><p>Ampla variedade de produtos para atividades ao ar livre e indoor, ideais para qualquer idade.</p></div></div><div class="srv-item"><span class="srv-n">03</span><div><h4>Brinquedos de Qualidade</h4><p>Selecionamos marcas confiáveis e produtos seguros que garantem diversão sem preocupações.</p></div></div><div class="srv-item"><span class="srv-n">04</span><div><h4>Consultoria de Compra</h4><p>Nossa equipe experiente auxilia na escolha ideal conforme a idade e preferências dos clientes.</p></div></div></div>
-<div id="sobre" class="sobre-sec"><div class="sobre-inner">
-  <p class="sec-label">Sobre a empresa</p><h2 class="sec-h2">Quem somos</h2>
-  <p>A Segredo é uma loja especializada em brinquedos e artigos recreativos localizada em Rio das Ostras, RJ. Desde o início, dedicamo-nos a oferecer produtos de qualidade que proporcionam alegria e entretenimento para crianças e famílias de toda a região.</p><p>Nosso diferencial está no atendimento personalizado, na cuidadosa seleção de produtos seguros e na variedade que atende desde bebês até adultos. Acreditamos que brincar é fundamental para o desenvolvimento e felicidade de todos.</p>
-  <div class="meta-grid">
-    <div class="meta-cell"><div class="meta-label">Razão Social</div><div class="meta-value">M. A. Martins Contessotto Presentes Ltda</div></div>
-    <div class="meta-cell"><div class="meta-label">CNPJ</div><div class="meta-value">04.504.869/0001-24</div></div>
-    <div class="meta-cell"><div class="meta-label">Estado</div><div class="meta-value">Rio de Janeiro</div></div>
-    <div class="meta-cell"><div class="meta-label">Fundação</div><div class="meta-value">2001</div></div>
+<div id="servicos" class="section"><p class="section-label">Como atuamos</p><h2>Nossas áreas de expertise</h2><div class="srv-row"><div class="srv-num">01</div><div class="srv-body"><h4>Brinquedos Educativos</h4><p>Seleção de brinquedos que desenvolvem habilidades cognitivas e aprendizado lúdico para crianças de todas as idades.</p></div></div><div class="srv-row"><div class="srv-num">02</div><div class="srv-body"><h4>Artigos Recreativos</h4><p>Ampla variedade de jogos, esportes e atividades para lazer em família e com amigos.</p></div></div><div class="srv-row"><div class="srv-num">03</div><div class="srv-body"><h4>Presentes Criativos</h4><p>Sugestões personalizadas de presentes inovadores para aniversários, festas e ocasiões especiais.</p></div></div><div class="srv-row"><div class="srv-num">04</div><div class="srv-body"><h4>Atendimento Especializado</h4><p>Equipe treinada pronta para orientar na escolha do melhor brinquedo conforme a idade e preferências.</p></div></div></div>
+<div id="sobre" class="section"><p class="section-label">Sobre a empresa</p><h2>Nossa empresa</h2>
+<div class="sobre-grid">
+  <div class="sobre-text"><p>Desde sua fundação, a Segredo se dedica a oferecer brinquedos e artigos recreativos de qualidade para a comunidade de Rio das Ostras. Acreditamos que o brincar é essencial no desenvolvimento infantil, por isso selecionamos cuidadosamente cada produto disponível em nossa loja.</p><p>Nossa diferença está no atendimento personalizado e no compromisso com produtos seguros e inovadores. A satisfação de nossos clientes é nossa prioridade, oferecendo sempre as melhores opções para diversão garantida em casa ou ao ar livre.</p></div>
+  <div class="stats-panel">
+    <p><strong>Razão Social</strong>M. A. Martins Contessotto Presentes Ltda</p>
+    <p><strong>CNPJ</strong>04.504.869/0001-24</p>
+    <p><strong>Estado</strong>Rio de Janeiro</p>
+    <p><strong>Situação</strong>✅ Ativa</p>
   </div>
 </div></div>
-<div id="contato" class="contato-sec"><p class="sec-label">Fale conosco</p><h2 class="sec-h2">Fale conosco</h2>
-<div class="contato-inner">
-  <p>Atendimento reservado e personalizado.</p>
+<div id="contato" class="section"><p class="section-label">Fale conosco</p><h2>Fale conosco</h2>
+<div class="contato-box">
+  <p>Estamos disponíveis para apresentar nossas soluções.</p>
   <p><strong>Telefone:</strong> <a href="tel:+552227608456">(22) 2760-8456</a></p><p><strong>Endereço:</strong> R. Aurelia Moreira Jorge, 37, Centro, Rio Das Ostras — RJ, CEP 28893-064</p>
 </div></div>
-<footer><span>Segredo · CNPJ 04.504.869/0001-24</span><span>© 2001–2026 M. A. Martins Contessotto Presentes Ltda</span></footer>
+<footer><span>Segredo — CNPJ 04.504.869/0001-24</span><span>© 2001–2026 M. A. Martins Contessotto Presentes Ltda</span></footer>
 </body></html>
